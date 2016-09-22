@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Order an array of objects by the key 'weight' (or another key)",
   "main": "weight_sort.js",
+  "devDependencies": {
+    "mocha": "*"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
