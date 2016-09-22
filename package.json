@@ -1,6 +1,6 @@
 {
   "name": "weight-sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Order an array of objects by the key 'weight' (or another key)",
   "main": "weight_sort.js",
   "devDependencies": {
