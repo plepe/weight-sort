@@ -1,0 +1,19 @@
+{
+  "name": "weight-sort",
+  "version": "1.0.0",
+  "description": "Order an array of objects by the key 'weight' (or another key)",
+  "main": "weight_sort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plepe/weight-sort.git"
+  },
+  "author": "Stephan Bösch-Plepelits",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/plepe/weight-sort/issues"
+  },
+  "homepage": "https://github.com/plepe/weight-sort#readme"
+}

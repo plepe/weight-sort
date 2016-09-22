@@ -104,3 +104,8 @@ function weight_sort(arr, weight_key) {
 
   return ret2;
 }
+
+if(typeof module != 'undefined' && module.exports)
+  module.exports = weight_sort
+if(typeof window != 'undefined')
+  window.weight_sort = weight_sort
