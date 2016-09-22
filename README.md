@@ -3,12 +3,12 @@ Order an array of objects by the key 'weight' (or another key)
 ## Usage
 # NodeJS
 ```js
-var weight_sort = require('weight_sort')
+var weight_sort = require('weight-sort')
 ```
 
 # In-Browser
 ```html
-<script src='node_module/weight_sort/weight_sort.js'>
+<script src='node_module/weight-sort/weight_sort.js'>
 ```
 
 ## Example
