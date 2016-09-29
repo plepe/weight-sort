@@ -8,13 +8,12 @@
     "eslint-config-standard": "^6.1.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.1",
-    "phplint": "*",
     "mocha": "*"
   },
   "scripts": {
-    "test": "mocha; phpunit test/test.php",
+    "test": "mocha && phpunit test/test.php",
     "prepublish": "npm run lint",
-    "lint": "eslint weightSort.js; phplint weightSort.php"
+    "lint": "eslint weightSort.js && php-cs-fixer fix weightSort.php --dry-run --diff"
   },
   "repository": {
     "type": "git",
