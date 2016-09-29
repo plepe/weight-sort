@@ -1,5 +1,5 @@
 var assert = require('assert')
-var weight_sort = require('../weight_sort')
+var weightSort = require('../weightSort')
 var input = [
   { name: 'Alice',  weight: 62.5, height: 160 },
   { name: 'Bob',    weight: 77.0, height: 180 },
@@ -8,9 +8,9 @@ var input = [
   { name: 'Earl',   weight: 80.0, height: 185 }
 ]
 
-describe('weight_sort - standard, using objects', function() {
+describe('weightSort - standard, using objects', function() {
   it('sort, default ("weight" are numericals)', function() {
-    var arr = weight_sort(input)
+    var arr = weightSort(input)
 
     assert.deepEqual([
       { name: 'Alice',  weight: 62.5, height: 160 },
@@ -24,7 +24,7 @@ describe('weight_sort - standard, using objects', function() {
   })
 
   it('sort, key "height" (which are integers)', function() {
-    var arr = weight_sort(input, 'height')
+    var arr = weightSort(input, 'height')
 
     assert.deepEqual([
       { name: 'Alice',  weight: 62.5, height: 160 },

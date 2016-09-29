@@ -2,12 +2,18 @@
   "name": "weight-sort",
   "version": "1.0.1",
   "description": "Order an array of objects by the key 'weight' (or another key)",
-  "main": "weight_sort.js",
+  "main": "weightSort.js",
   "devDependencies": {
+    "eslint": "*",
+    "eslint-config-standard": "^6.1.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
     "mocha": "*"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "npm run lint",
+    "lint": "eslint weightSort.js"
   },
   "repository": {
     "type": "git",
