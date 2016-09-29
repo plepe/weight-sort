@@ -12,7 +12,7 @@
     "mocha": "*"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha; phpunit test/test.php",
     "prepublish": "npm run lint",
     "lint": "eslint weightSort.js; phplint weightSort.php"
   },
