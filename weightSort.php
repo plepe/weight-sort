@@ -1,5 +1,6 @@
 <?php
-// weight_sort(arr, [weight_key])
+/*. require_module 'standard'; .*/
+// weightSort(arr, [weight_key])
 // Parameters:
 // arr ... an array of elements
 //           an element may be: array( weight, var )
@@ -21,7 +22,7 @@
 // Entries in the source array with the same weight are returned in the
 // same order
 // * weight might be a function closure
-function weight_sort($arr, $weight_key='weight') {
+function weightSort($arr, $weight_key='weight') {
   $ret1=array();
 
   if(!$arr)
@@ -62,4 +63,8 @@ function weight_sort($arr, $weight_key='weight') {
   return $ret2;
 }
 
-
+// legacy
+function weight_sort($arr, $weightKey='weight') {
+  trigger_error(E_USER_WARNING, 'Deprecated: weight_sort, use weightSort instead');
+  return weightSort($arr, $weightKey);
+}
