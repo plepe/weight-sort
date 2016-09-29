@@ -23,12 +23,21 @@
 // same order
 // * weight might be a function closure
 function weightSort (arr, weightKey) {
-  function numericalCmp (a, b) {
+  // source: http://stackoverflow.com/a/9716515/4832631
+  function isNumber (n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+  }
+
+  function cmp (a, b) {
     if (a === b) {
       return 0
     }
 
-    return parseFloat(a) < parseFloat(b) ? -1 : 1
+    if (isNumber(a) && isNumber(b)) {
+      return parseFloat(a) < parseFloat(b) ? -1 : 1
+    } else {
+      return a < b ? -1 : 1
+    }
   }
 
   var i
@@ -86,7 +95,7 @@ function weightSort (arr, weightKey) {
   for (var k in ret1) {
     keys1.push(k)
   }
-  keys1.sort(numericalCmp)
+  keys1.sort(cmp)
   var ret2 = []
 
   // iterate through array and compile final return value
