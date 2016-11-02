@@ -34,6 +34,19 @@ var origArray = [
   { name: 'Debby',  weight: 62.5, height: 165 },
   { name: 'Earl',   weight: 80.0, height: 185 }
 ]
+
+/* Default: order elements by 'weight' */
+var sortedArray = weightSort(origArray)
+console.log(sortedArray)
+// [
+//    { name: 'Alice',  weight: 62.5, height: 160 },
+//    { name: 'Debby',  weight: 62.5, height: 165 },
+//    { name: 'Bob',    weight: 77.0, height: 180 },
+//    { name: 'Earl',   weight: 80.0, height: 185 },
+//    { name: 'Charly', weight: 82.5, height: 180 }
+// ]
+
+/* Optional: order elements by 'height' */
 var sortedArray = weightSort(origArray, 'height')
 console.log(sortedArray)
 // [
