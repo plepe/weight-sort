@@ -31,6 +31,11 @@ function weightSort($arr, $options = array('key' => 'weight'))
     if (!array_key_exists('key', $options)) {
         $options['key'] = 'weight';
     }
+    if (!array_key_exists('compareFunction', $options)) {
+        $options['compareFunction'] = function ($a, $b) {
+            return $a <=> $b;
+        };
+    }
 
     $ret1 = array();
 
@@ -59,7 +64,7 @@ function weightSort($arr, $options = array('key' => 'weight'))
     }
 
     // get the keys, convert to value, order them
-    ksort($ret1);
+    uksort($ret1, $options['compareFunction']);
     $ret2 = array();
 
     // iterate through array and compile final return value

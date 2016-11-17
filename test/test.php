@@ -97,4 +97,26 @@ class weightSort_test extends PHPUnit_Framework_TestCase {
 
     $this->assertEquals($expected, $actual);
   }
+
+  // sort, with alternative compareFunction
+  public function testWeightSortOptionsCompareFunction() {
+    global $input;
+    $arr = weightSort($input, array(
+        'key' => 'height',
+        'compareFunction' => function ($a, $b) {
+            return abs($a - 179) < abs($b - 179) ? -1 : 1;
+        }
+    ));
+
+    $expected = var_export(array(
+      1 => array( 'name' => 'Bob',    'weight' => 77.0, 'height' => 180 ),
+      2 => array( 'name' => 'Charly', 'weight' => 82.5, 'height' => 180 ),
+      4 => array( 'name' => 'Earl',   'weight' => 80.0, 'height' => 185 ),
+      3 => array( 'name' => 'Debby',  'weight' => 62.5, 'height' => 165 ),
+      0 => array( 'name' => 'Alice',  'weight' => 62.5, 'height' => 160 ),
+    ), 1);
+    $actual = var_export($arr, 1);
+
+    $this->assertEquals($expected, $actual);
+  }
 }

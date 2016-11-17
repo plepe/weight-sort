@@ -81,4 +81,24 @@ describe('weightSort - standard, using objects', function() {
 
     return true
   })
+
+  it('sort, with alternative compareFunction', function () {
+    var arr = weightSort(input, {
+      key: 'height',
+      compareFunction: function (a, b) {
+        // closest to 179
+        return Math.abs(a - 179) < Math.abs(b - 179) ? -1 : 1
+      }
+    })
+
+    assert.deepEqual([
+      { name: 'Bob',    weight: 77.0, height: 180 },
+      { name: 'Charly', weight: 82.5, height: 180 },
+      { name: 'Earl',   weight: 80.0, height: 185 },
+      { name: 'Debby',  weight: 62.5, height: 165 },
+      { name: 'Alice',  weight: 62.5, height: 160 }
+    ], arr)
+
+    return true
+  })
 })

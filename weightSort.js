@@ -55,6 +55,9 @@ function weightSort (arr, options) {
   if (!('key' in options)) {
     options.key = 'weight'
   }
+  if (!('compareFunction' in options)) {
+    options.compareFunction = cmp
+  }
 
   // check if input array is an object, convert to array
   var isObject = false
@@ -104,7 +107,7 @@ function weightSort (arr, options) {
   for (var k in ret1) {
     keys1.push(k)
   }
-  keys1.sort(cmp)
+  keys1.sort(options.compareFunction)
   var ret2 = []
 
   // iterate through array and compile final return value
