@@ -8,12 +8,12 @@ var weightSort = require('weight-sort')
 
 ## In-Browser
 ```html
-<script src='node_module/weight-sort/weight_sort.js'>
+<script src='node_module/weight-sort/weightSort.js'>
 ```
 
 ## PHP
 ```php
-include "path/to/weight_sort.php";
+include "path/to/weightSort.php";
 ```
 
 # SYNOPSIS
