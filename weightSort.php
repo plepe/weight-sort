@@ -28,6 +28,9 @@ function weightSort($arr, $options = array('key' => 'weight'))
             'key' => $options,
         );
     }
+    if (!array_key_exists('key', $options)) {
+        $options['key'] = 'weight';
+    }
 
     $ret1 = array();
 

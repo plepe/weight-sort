@@ -66,4 +66,19 @@ describe('weightSort - standard, using objects', function() {
 
     return true
   })
+
+  it('sort, with empty options object', function () {
+    var arr = weightSort(input, {
+    })
+
+    assert.deepEqual([
+      { name: 'Alice',  weight: 62.5, height: 160 },
+      { name: 'Debby',  weight: 62.5, height: 165 },
+      { name: 'Bob',    weight: 77.0, height: 180 },
+      { name: 'Earl',   weight: 80.0, height: 185 },
+      { name: 'Charly', weight: 82.5, height: 180 }
+    ], arr)
+
+    return true
+  })
 })

@@ -52,6 +52,9 @@ function weightSort (arr, options) {
       key: 'weight'
     }
   }
+  if (!('key' in options)) {
+    options.key = 'weight'
+  }
 
   // check if input array is an object, convert to array
   var isObject = false
