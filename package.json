@@ -11,7 +11,9 @@
     "mocha": "*"
   },
   "scripts": {
-    "test": "mocha && phpunit test/test.php",
+    "test": "npm run jstest && npm run phptest",
+    "jstest": "mocha",
+    "phptest": "phpunit test/test.php",
     "prepublish": "npm run lint",
     "lint": "eslint weightSort.js && php-cs-fixer fix weightSort.php --dry-run --diff"
   },
