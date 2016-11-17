@@ -21,8 +21,14 @@
 // Entries in the source array with the same weight are returned in the
 // same order
 // * weight might be a function closure
-function weightSort($arr, $weight_key = 'weight')
+function weightSort($arr, $options = array('key' => 'weight'))
 {
+    if (is_string($options)) {
+        $options = array(
+            'key' => $options,
+        );
+    }
+
     $ret1 = array();
 
     if (!$arr) {
@@ -32,13 +38,13 @@ function weightSort($arr, $weight_key = 'weight')
     // first put all elements into an assoc. array
     foreach ($arr as $k => $cur) {
         if (is_object($cur)) {
-            $wgt = isset($cur->$weight_key) ? $cur->$weight_key : 0;
+            $wgt = isset($cur->$options['key']) ? $cur->$options['key'] : 0;
             $data = $cur;
         } elseif ((sizeof($cur) == 2) && array_key_exists(0, $cur) && array_key_exists(1, $cur)) {
             $wgt = $cur[0];
             $data = $cur[1];
         } else {
-            $wgt = (isset($cur[$weight_key]) ? $cur[$weight_key] : 0);
+            $wgt = (isset($cur[$options['key']]) ? $cur[$options['key']] : 0);
             $data = $cur;
         }
 

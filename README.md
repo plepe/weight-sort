@@ -17,13 +17,17 @@ include "path/to/weightSort.php";
 ```
 
 # SYNOPSIS
-arr = weightSort(input, [key])
+arr = weightSort(input, [options])
 
-Sort the input array by the key 'weight' or the key specified as second
-parameter. Returns the sorted array, the original array will not be changed.
+Sort the input array by the key 'weight' or as specified by the options.
+Returns the sorted array, the original array will not be changed.
 
 If there are several entries with the same weight, the original order will
 remain.
+
+Options:
+Can be either a string, which will define a different key or an object (array in PHP mode) with the following properties:
+* key: an alternative key by which to sort
 
 # Example
 ```js

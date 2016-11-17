@@ -1,4 +1,4 @@
-// weightSort(arr, [weightKey])
+// weightSort(arr, [options | weightKey])
 // Parameters:
 // arr ... an array of form [ [ weight, var], ... ]
 //         [ [ -3, A ], [ -1, B ], [ 5, C ], [ -1, D ] ]
@@ -22,7 +22,7 @@
 // Entries in the source array with the same weight are returned in the
 // same order
 // * weight might be a function closure
-function weightSort (arr, weightKey) {
+function weightSort (arr, options) {
   // source: http://stackoverflow.com/a/9716515/4832631
   function isNumber (n) {
     return !isNaN(parseFloat(n)) && isFinite(n)
@@ -43,8 +43,14 @@ function weightSort (arr, weightKey) {
   var i
   var j
   var ret1 = {}
-  if (!weightKey) {
-    weightKey = 'weight'
+  if (typeof options === 'string') {
+    options = {
+      key: options
+    }
+  } else if (!options) {
+    options = {
+      key: 'weight'
+    }
   }
 
   // check if input array is an object, convert to array
@@ -71,7 +77,7 @@ function weightSort (arr, weightKey) {
       wgt = cur[0]
       data = cur[1]
     } else {
-      wgt = cur[weightKey]
+      wgt = cur[options.key]
       data = cur
     }
 
