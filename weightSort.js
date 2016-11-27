@@ -82,6 +82,9 @@ function weightSort (arr, options) {
     if (cur.length) {
       wgt = cur[0]
       data = cur[1]
+    } else if (typeof options.key === 'function') {
+      wgt = options.key(cur)
+      data = cur
     } else {
       wgt = cur[options.key]
       data = cur
