@@ -3,9 +3,9 @@ $id="weight_sort";
 
 $include=array(
   'php'=>array(
-    "weight_sort.php",
+    "weightSort.php",
   ),
   'js'=>array(
-    "weight_sort.js",
+    "weightSort.js",
   ),
 );
