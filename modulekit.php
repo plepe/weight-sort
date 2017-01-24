@@ -1,5 +1,7 @@
 <?php
-$id="weight_sort";
+$id="weight-sort";
+
+$aliases = array("weight_sort");
 
 $include=array(
   'php'=>array(
