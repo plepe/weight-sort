@@ -1,3 +1,7 @@
+Version 1.2.1
+=============
+* Bugfixes
+
 Version 1.2.0
 =============
 * 2nd parameter is either the key or an object with options
