@@ -33,7 +33,11 @@ function weightSort($arr, $options = array('key' => 'weight'))
     }
     if (!array_key_exists('compareFunction', $options)) {
         $options['compareFunction'] = function ($a, $b) {
-            return $a <=> $b;
+            if ($a == $b) {
+                return 0;
+            }
+
+            return $a < $b ? -1 : 1;
         };
     }
 
