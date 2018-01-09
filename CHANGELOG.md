@@ -1,3 +1,7 @@
+Version 1.3.0
+=============
+* New option 'reverse' (order backwards)
+
 Version 1.2.1
 =============
 * Bugfixes
