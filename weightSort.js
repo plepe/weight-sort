@@ -108,6 +108,11 @@ function weightSort (arr, options) {
     keys1.push(k)
   }
   keys1.sort(options.compareFunction)
+
+  if (options.reverse) {
+    keys1.reverse()
+  }
+
   var ret2 = []
 
   // iterate through array and compile final return value

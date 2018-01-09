@@ -119,4 +119,36 @@ class weightSort_test extends PHPUnit_Framework_TestCase {
 
     $this->assertEquals($expected, $actual);
   }
+
+  public function testWeightSortReverseFalse() {
+    global $input;
+    $arr = weightSort($input, array('reverse' => false));
+
+    $expected = var_export(array(
+      0 => array( 'name' => 'Alice',  'weight' => 62.5, 'height' => 160 ),
+      3 => array( 'name' => 'Debby',  'weight' => 62.5, 'height' => 165 ),
+      1 => array( 'name' => 'Bob',    'weight' => 77.0, 'height' => 180 ),
+      4 => array( 'name' => 'Earl',   'weight' => 80.0, 'height' => 185 ),
+      2 => array( 'name' => 'Charly', 'weight' => 82.5, 'height' => 180 )
+    ), 1);
+    $actual = var_export($arr, 1);
+
+    $this->assertEquals($expected, $actual);
+  }
+
+  public function testWeightSortReverseTrue() {
+    global $input;
+    $arr = weightSort($input, array('reverse' => true));
+
+    $expected = var_export(array(
+      2 => array( 'name' => 'Charly', 'weight' => 82.5, 'height' => 180 ),
+      4 => array( 'name' => 'Earl',   'weight' => 80.0, 'height' => 185 ),
+      1 => array( 'name' => 'Bob',    'weight' => 77.0, 'height' => 180 ),
+      0 => array( 'name' => 'Alice',  'weight' => 62.5, 'height' => 160 ),
+      3 => array( 'name' => 'Debby',  'weight' => 62.5, 'height' => 165 )
+    ), 1);
+    $actual = var_export($arr, 1);
+
+    $this->assertEquals($expected, $actual);
+  }
 }

@@ -71,6 +71,10 @@ function weightSort($arr, $options = array('key' => 'weight'))
     uksort($ret1, $options['compareFunction']);
     $ret2 = array();
 
+    if (array_key_exists('reverse', $options) && $options['reverse']) {
+        $ret1 = array_reverse($ret1);
+    }
+
     // iterate through array and compile final return value
     foreach ($ret1 as $cur) {
         foreach ($cur as $j => $d) {

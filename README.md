@@ -30,6 +30,7 @@ remain.
 Options:
 Can be either a string, which will define a different key or an object (array in PHP mode) with the following properties:
 * key: an alternative key by which to sort
+* reverse: boolean. if true, order from highest value to lowest.
 * compareFunction: Specifies a function that defines the sort order. The function is compatible with `array.sort()`. It will be passed two key values and should return -1, 0 or 1. See below for an example.
 
 # Example

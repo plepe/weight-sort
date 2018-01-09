@@ -101,4 +101,32 @@ describe('weightSort - standard, using objects', function() {
 
     return true
   })
+
+  it('sort, with reverse option set to false', function() {
+    var arr = weightSort(input, { reverse: false })
+
+    assert.deepEqual([
+      { name: 'Alice',  weight: 62.5, height: 160 },
+      { name: 'Debby',  weight: 62.5, height: 165 },
+      { name: 'Bob',    weight: 77.0, height: 180 },
+      { name: 'Earl',   weight: 80.0, height: 185 },
+      { name: 'Charly', weight: 82.5, height: 180 }
+    ], arr)
+
+    return true
+  })
+
+  it('sort, with reverse option set to true', function() {
+    var arr = weightSort(input, { reverse: true })
+
+    assert.deepEqual([
+      { name: 'Charly', weight: 82.5, height: 180 },
+      { name: 'Earl',   weight: 80.0, height: 185 },
+      { name: 'Bob',    weight: 77.0, height: 180 },
+      { name: 'Alice',  weight: 62.5, height: 160 },
+      { name: 'Debby',  weight: 62.5, height: 165 }
+    ], arr)
+
+    return true
+  })
 })
