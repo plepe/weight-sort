@@ -8,7 +8,7 @@ $input = array(
   array( 'name' => 'Earl',   'weight' => 80.0, 'height' => 185 )
 );
 
-class weightSort_test extends PHPUnit_Framework_TestCase {
+class weightSort_test extends PHPUnit\Framework\TestCase {
 
   // sort, default ("weight" are numericals)
   public function testWeightSortDefault () {
