@@ -15,7 +15,7 @@
     "jstest": "mocha",
     "phptest": "phpunit test/test.php",
     "prepublish": "npm run lint",
-    "lint": "eslint weightSort.js && php-cs-fixer fix weightSort.php --dry-run --diff"
+    "lint": "eslint weightSort.js && vendor/bin/php-cs-fixer fix weightSort.php --dry-run --diff"
   },
   "repository": {
     "type": "git",

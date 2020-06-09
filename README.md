@@ -1,5 +1,14 @@
 Order an array of objects by the key 'weight' (or another key)
 
+# Installation
+## Development
+```
+git clone https://github.com/plepe/weight-sort
+cd weight-sort
+composer install
+npm install
+```
+
 # Usage
 ## NodeJS
 ```js
