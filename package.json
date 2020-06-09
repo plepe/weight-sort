@@ -4,11 +4,11 @@
   "description": "Order an array of objects by the key 'weight' (or another key)",
   "main": "weightSort.js",
   "devDependencies": {
-    "eslint": "*",
+    "eslint": "^7.2.0",
     "eslint-config-standard": "^6.1.0",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "mocha": "*"
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^2.3.1",
+    "mocha": "^7.2.0"
   },
   "scripts": {
     "test": "npm run jstest && npm run phptest",
