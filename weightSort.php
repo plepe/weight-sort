@@ -88,7 +88,7 @@ function weightSort($arr, $options = array('key' => 'weight'))
 // legacy
 function weight_sort($arr, $weightKey = 'weight')
 {
-    trigger_error(E_USER_WARNING, 'Deprecated: weight_sort, use weightSort instead');
+    trigger_error('Deprecated: weight_sort, use weightSort instead', E_USER_WARNING);
 
     return weightSort($arr, $weightKey);
 }
